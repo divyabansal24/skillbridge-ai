@@ -7,13 +7,6 @@ matching in a single full-stack application.
 
 ---
 
-## Live Demo
-
-- Frontend: https://skillbridge-ai.vercel.app
-- Backend: https://skillbridge-api.onrender.com
-
----
-
 ## Problem Statement
 
 Engineering students face four core problems during placement 
@@ -40,7 +33,7 @@ Select a target role. The platform compares your resume skills
 against role requirements and lists exactly what you need to learn.
 
 **AI Mock Interview**
-Generate role-specific interview questions using Claude AI. 
+Generate role-specific interview questions using Google Gemini AI. 
 Submit answers and receive a score with structured feedback 
 covering strengths and areas for improvement.
 
@@ -49,7 +42,7 @@ Paste any job description. The system extracts technical keywords
 and calculates a match percentage against your skill profile.
 
 **Cover Letter Generator**
-Provide company name, role, experience, and tone. Claude AI 
+Provide company name, role, experience, and tone. Gemini AI 
 generates a complete, ready-to-send cover letter.
 
 **LinkedIn Profile Analyzer**
@@ -86,8 +79,8 @@ to view.
 - mammoth
 
 **AI**
-- Anthropic Claude API
-- Model: claude-haiku-4-5-20251001
+- Google Gemini API
+- Model: gemini-2.5-flash
 
 ---
 
@@ -132,7 +125,7 @@ SkillBridge/
 ```
 Node.js v18+
 MongoDB Atlas account
-Anthropic API key
+Google Gemini API key
 ```
 
 ### Installation
@@ -156,7 +149,7 @@ Create a `.env` file in the backend folder:
 ```
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
-ANTHROPIC_API_KEY=your_claude_api_key
+GEMINI_API_KEY=your_gemini_api_key
 PORT=5000
 ```
 

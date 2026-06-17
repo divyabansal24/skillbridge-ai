@@ -1653,7 +1653,7 @@ function Dashboard() {
               <div className="detail-card" style={{ minHeight: "auto", justifyContent: "center", alignItems: "center", textAlign: "center", borderStyle: "dashed" }}>
                 {!analysisResult && !analyzing ? (
                   <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem", padding: "1.5rem" }}>
-                    <div style={{ width: "64px", height: "64px", borderRadius: "50%", backgroundColor: "rgba(108, 99, 255, 0.05)", display: "flex", alignItems: "center", justifycontent: "center", border: "1px solid rgba(108, 99, 255, 0.1)" }}>
+                    <div style={{ width: "64px", height: "64px", borderRadius: "50%", backgroundColor: "rgba(15, 23, 42, 0.05)", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(15, 23, 42, 0.1)" }}>
                       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="10" />
                         <line x1="12" y1="16" x2="12" y2="12" />

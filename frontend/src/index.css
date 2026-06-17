@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --bg: #08081A;
-  --bg-sidebar: #0F0F26;
-  --border: #252550;
-  --border2: rgba(255, 255, 255, 0.05);
-  --card: #151532;
-  --card-hover: #1e1e46;
-  --accent1: #6C63FF; /* Accent purple */
-  --accent2: #00D4AA; /* Accent green */
-  --text-primary: #FFFFFF;
-  --text-secondary: #A0AEC0;
-  --muted: #A0AEC0;
-  --display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg: #F8F7F4; /* Soft warm oatmeal background */
+  --bg-sidebar: #FFFFFF; /* Crisp white sidebar */
+  --border: rgba(15, 23, 42, 0.08); /* Minimal slate border */
+  --border2: rgba(15, 23, 42, 0.04);
+  --card: #FFFFFF; /* Crisp white card background */
+  --card-hover: #FFFFFF;
+  --accent1: #1E293B; /* Deep Slate Gray */
+  --accent2: #475569; /* Medium Slate */
+  --text-primary: #0F172A; /* Deep Charcoal/Slate */
+  --text-secondary: #475569; /* Slate Gray */
+  --muted: #64748B; /* Muted Slate */
+  --display: 'Lora', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
@@ -42,37 +42,23 @@ code {
   overflow: hidden;
 }
 
-/* Background glow designs for auth pages */
+/* Background glows - disabled for clean human look */
 .auth-glow-1 {
-  position: absolute;
-  top: -20%;
-  left: -10%;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(108, 99, 255, 0.1) 0%, transparent 70%);
-  pointer-events: none;
+  display: none;
 }
 
 .auth-glow-2 {
-  position: absolute;
-  bottom: -20%;
-  right: -10%;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 212, 170, 0.05) 0%, transparent 70%);
-  pointer-events: none;
+  display: none;
 }
 
 .auth-card {
   background-color: var(--card);
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 16px;
   padding: 3rem 2.5rem;
   width: 100%;
   max-width: 440px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.06);
   position: relative;
   z-index: 10;
   display: flex;
@@ -88,26 +74,34 @@ code {
 .auth-logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 800;
-  font-size: 1.5rem;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.6rem;
   color: var(--text-primary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .auth-logo-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent1), var(--accent2));
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--accent1);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #FFFFFF;
+}
+
+.auth-logo-icon svg {
+  color: #FFFFFF;
 }
 
 .auth-title {
+  font-family: var(--display);
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
@@ -136,32 +130,33 @@ code {
 }
 
 .auth-input {
-  background-color: var(--bg);
-  border: 1px solid var(--border);
+  background-color: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.12);
   color: var(--text-primary);
-  border-radius: 12px;
-  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
   font-size: 0.95rem;
   font-family: var(--font-sans);
   outline: none;
   transition: all 0.2s ease;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .auth-input:focus {
   border-color: var(--accent1);
-  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(30, 41, 59, 0.06);
 }
 
 .auth-input::placeholder {
-  color: rgba(255, 255, 255, 0.25);
+  color: #94A3B8;
 }
 
 .auth-error-msg {
-  background-color: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.25);
-  color: #FF6B6B;
-  border-radius: 10px;
+  background-color: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  color: #DC2626;
+  border-radius: 8px;
   padding: 0.8rem 1rem;
   font-size: 0.85rem;
   display: flex;
@@ -172,11 +167,11 @@ code {
 
 .auth-btn {
   background-color: var(--accent1);
-  color: var(--text-primary);
+  color: #FFFFFF;
   border: none;
-  border-radius: 12px;
-  padding: 0.95rem;
-  font-size: 1rem;
+  border-radius: 8px;
+  padding: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -188,7 +183,7 @@ code {
 }
 
 .auth-btn:hover {
-  background-color: #5A52E5;
+  background-color: #0F172A;
   transform: translateY(-1px);
 }
 
@@ -197,15 +192,15 @@ code {
 }
 
 .auth-btn:disabled {
-  background-color: rgba(108, 99, 255, 0.5);
+  background-color: rgba(30, 41, 59, 0.5);
   cursor: not-allowed;
 }
 
 .auth-spinner {
-  width: 20px;
-  height: 20px;
-  border: 2.5px solid rgba(255, 255, 255, 0.2);
-  border-top: 2.5px solid var(--text-primary);
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 2px solid #FFFFFF;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -230,18 +225,18 @@ code {
 }
 
 .auth-link:hover {
-  color: #8E87FF;
+  color: #0F172A;
   text-decoration: underline;
 }
 
 /* Button Styles */
 .btn-primary {
   background: var(--accent1);
-  color: var(--text-primary);
-  border: none;
-  border-radius: 10px;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.95rem;
+  color: #FFFFFF;
+  border: 1px solid var(--accent1);
+  border-radius: 8px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -252,15 +247,38 @@ code {
 }
 
 .btn-primary:hover {
-  background: #5A52E5;
+  background: #0F172A;
+  border-color: #0F172A;
   transform: translateY(-1px);
 }
 
 .btn-secondary {
-  background: transparent;
+  background: #FFFFFF;
   color: var(--text-primary);
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  border-radius: 8px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover {
+  background: #F8FAFC;
+  border-color: rgba(15, 23, 42, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background: var(--accent1);
+  color: #FFFFFF;
+  border: 1px solid var(--accent1);
+  border-radius: 8px;
   padding: 0.75rem 1.5rem;
   font-size: 0.95rem;
   font-weight: 600;
@@ -272,30 +290,11 @@ code {
   justify-content: center;
 }
 
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: var(--accent1);
-}
-
-.btn-accent {
-  background: linear-gradient(135deg, var(--accent1), var(--accent2));
-  color: var(--text-primary);
-  border: none;
-  border-radius: 10px;
-  padding: 0.75rem 1.75rem;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .btn-accent:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+  background: #0F172A;
+  border-color: #0F172A;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
 
 /* Reusable global toast at bottom-right */
@@ -304,15 +303,15 @@ code {
   bottom: 2rem;
   right: 2rem;
   background-color: var(--accent1);
-  color: var(--text-primary);
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 0.95rem;
+  color: #FFFFFF;
+  padding: 0.85rem 1.35rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   z-index: 9999;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.1);
   animation: slideInBottomRight 0.3s cubic-bezier(0.16, 1, 0.3, 1), fadeOutBottomRight 0.3s 2.7s forwards;
 }

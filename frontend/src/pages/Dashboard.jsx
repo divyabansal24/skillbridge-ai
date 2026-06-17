@@ -1835,9 +1835,9 @@ function Dashboard() {
                       padding: "0.75rem 0.5rem",
                       fontSize: "0.85rem",
                       textAlign: "center",
-                      backgroundColor: interviewRole === role ? "var(--accent-purple)" : "transparent",
+                      backgroundColor: interviewRole === role ? "var(--accent-purple)" : "#FFFFFF",
                       borderColor: interviewRole === role ? "var(--accent-purple)" : "var(--border-color)",
-                      color: "#FFFFFF"
+                      color: interviewRole === role ? "#FFFFFF" : "var(--text-primary)"
                     }}
                   >
                     {role === "Backend Developer" ? "Backend Dev" : role === "Frontend Developer" ? "Frontend Dev" : role}
@@ -1861,16 +1861,16 @@ function Dashboard() {
                       width: "100%", 
                       padding: "0.75rem 1rem", 
                       borderRadius: "8px", 
-                      backgroundColor: "rgba(255, 255, 255, 0.03)", 
+                      backgroundColor: "#FFFFFF", 
                       border: "1px solid var(--border-color)", 
-                      color: "#FFFFFF",
+                      color: "var(--text-primary)",
                       cursor: "pointer",
                       outline: "none"
                     }}
                   >
-                    <option value="Beginner" style={{ backgroundColor: "#1e1e2f", color: "#FFFFFF" }}>Beginner</option>
-                    <option value="Intermediate" style={{ backgroundColor: "#1e1e2f", color: "#FFFFFF" }}>Intermediate</option>
-                    <option value="Advanced" style={{ backgroundColor: "#1e1e2f", color: "#FFFFFF" }}>Advanced</option>
+                    <option value="Beginner" style={{ color: "var(--text-primary)" }}>Beginner</option>
+                    <option value="Intermediate" style={{ color: "var(--text-primary)" }}>Intermediate</option>
+                    <option value="Advanced" style={{ color: "var(--text-primary)" }}>Advanced</option>
                   </select>
                 </div>
 
@@ -1888,16 +1888,16 @@ function Dashboard() {
                       width: "100%", 
                       padding: "0.75rem 1rem", 
                       borderRadius: "8px", 
-                      backgroundColor: "rgba(255, 255, 255, 0.03)", 
+                      backgroundColor: "#FFFFFF", 
                       border: "1px solid var(--border-color)", 
-                      color: "#FFFFFF",
+                      color: "var(--text-primary)",
                       cursor: "pointer",
                       outline: "none"
                     }}
                   >
-                    <option value="Fresher" style={{ backgroundColor: "#1e1e2f", color: "#FFFFFF" }}>Fresher (0-1 Years)</option>
-                    <option value="Mid-Level" style={{ backgroundColor: "#1e1e2f", color: "#FFFFFF" }}>Mid-Level (1-3 Years)</option>
-                    <option value="Senior" style={{ backgroundColor: "#1e1e2f", color: "#FFFFFF" }}>Senior (3+ Years)</option>
+                    <option value="Fresher" style={{ color: "var(--text-primary)" }}>Fresher (0-1 Years)</option>
+                    <option value="Mid-Level" style={{ color: "var(--text-primary)" }}>Mid-Level (1-3 Years)</option>
+                    <option value="Senior" style={{ color: "var(--text-primary)" }}>Senior (3+ Years)</option>
                   </select>
                 </div>
               </div>
@@ -2248,7 +2248,7 @@ function Dashboard() {
 
                   <div style={{ flexGrow: "1", display: "flex", flexDirection: "column", gap: "0.25rem", textAlign: "left" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                      <h4 style={{ fontSize: "1.1rem", fontWeight: "700", color: "#FFFFFF" }}>{resource.title}</h4>
+                      <h4 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-primary)" }}>{resource.title}</h4>
                       <span className="resource-badge-free">FREE</span>
                     </div>
                     <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: "1.5", marginTop: "0.25rem" }}>{resource.subtitle}</p>
@@ -2295,9 +2295,9 @@ function Dashboard() {
                     fontFamily: "var(--font-sans)",
                     lineHeight: "1.6",
                     padding: "1.25rem",
-                    backgroundColor: "rgba(255, 255, 255, 0.02)",
+                    backgroundColor: "#FFFFFF",
                     border: "1px solid var(--border-color)",
-                    color: "#FFFFFF",
+                    color: "var(--text-primary)",
                     outline: "none",
                     borderRadius: "8px",
                     width: "100%",
@@ -2371,7 +2371,7 @@ function Dashboard() {
                           style={{ transition: "stroke-dashoffset 1s ease" }}
                         />
                       </svg>
-                      <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", fontSize: "1.75rem", fontWeight: "800", color: "#FFFFFF" }}>
+                      <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", fontSize: "1.75rem", fontWeight: "800", color: "var(--text-primary)" }}>
                         {jdResult.matchScore}%
                       </div>
                     </div>
@@ -2597,13 +2597,13 @@ function Dashboard() {
                     whiteSpace: "pre-wrap",
                     fontFamily: "var(--font-sans)",
                     lineHeight: "1.7",
-                    color: "#FFFFFF",
+                    color: "var(--text-primary)",
                     fontSize: "0.95rem",
                     textAlign: "left",
                     padding: "1.25rem",
-                    backgroundColor: "rgba(255, 255, 255, 0.01)",
+                    backgroundColor: "var(--bg-primary)",
                     borderRadius: "6px",
-                    border: "1px solid rgba(255, 255, 255, 0.03)",
+                    border: "1px solid var(--border-color)",
                     boxSizing: "border-box",
                     width: "100%"
                   }}>
@@ -2638,7 +2638,7 @@ function Dashboard() {
                         triggerToast("Downloaded Cover Letter!", "success");
                       }}
                       className="btn-secondary"
-                      style={{ display: "flex", alignItems: "center", gap: "0.35rem", color: "#FFFFFF", borderColor: "var(--border-color)", backgroundColor: "transparent" }}
+                      style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}
                     >
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
@@ -2721,7 +2721,7 @@ function Dashboard() {
                     disabled={pfSaving}
                     style={{ width: "18px", height: "18px", cursor: "pointer" }}
                   />
-                  <label htmlFor="make-public-toggle" style={{ color: "#FFFFFF", fontSize: "0.9rem", fontWeight: "600", cursor: "pointer" }}>
+                  <label htmlFor="make-public-toggle" style={{ color: "var(--text-primary)", fontSize: "0.9rem", fontWeight: "600", cursor: "pointer" }}>
                     Make profile public (visible to anyone with your link)
                   </label>
                 </div>
@@ -2918,7 +2918,7 @@ function Dashboard() {
                         transform: "translate(-50%, -50%)",
                         fontSize: "2.25rem",
                         fontWeight: "800",
-                        color: "#FFFFFF"
+                        color: "var(--text-primary)"
                       }}>
                         {liResult.overallScore}
                       </div>
@@ -3033,14 +3033,14 @@ function Dashboard() {
                       </button>
                     </div>
                     <div style={{ 
-                      backgroundColor: "rgba(255,255,255,0.02)", 
-                      border: "1px solid rgba(255,255,255,0.05)", 
+                      backgroundColor: "var(--bg-primary)", 
+                      border: "1px solid var(--border-color)", 
                       borderRadius: "8px", 
                       padding: "1.25rem", 
                       fontSize: "1.1rem", 
                       fontWeight: "600",
                       lineHeight: "1.4",
-                      color: "#FFFFFF"
+                      color: "var(--text-primary)"
                     }}>
                       {liResult.suggestedHeadline}
                     </div>
@@ -3048,7 +3048,7 @@ function Dashboard() {
 
                   <div className="detail-card" style={{ padding: "2rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                      <span style={{ fontSize: "0.75rem", fontWeight: "700", color: "#A8A2FF", textTransform: "uppercase", letterSpacing: "1px" }}>AI Suggested About Section</span>
+                      <span style={{ fontSize: "0.75rem", fontWeight: "700", color: "var(--text-secondary)", textTransform: "uppercase", letterSpacing: "1px" }}>AI Suggested About Section</span>
                       <button
                         onClick={() => {
                           navigator.clipboard.writeText(liResult.suggestedAbout);
@@ -3065,13 +3065,13 @@ function Dashboard() {
                       </button>
                     </div>
                     <div style={{ 
-                      backgroundColor: "rgba(255,255,255,0.02)", 
-                      border: "1px solid rgba(255,255,255,0.05)", 
+                      backgroundColor: "var(--bg-primary)", 
+                      border: "1px solid var(--border-color)", 
                       borderRadius: "8px", 
                       padding: "1.25rem", 
                       fontSize: "0.95rem", 
                       lineHeight: "1.6",
-                      color: "rgba(255,255,255,0.85)"
+                      color: "var(--text-primary)"
                     }}>
                       {liResult.suggestedAbout}
                     </div>
